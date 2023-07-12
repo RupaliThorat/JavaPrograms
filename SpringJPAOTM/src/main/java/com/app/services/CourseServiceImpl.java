@@ -1,6 +1,7 @@
 package com.app.services;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -33,6 +34,17 @@ public class CourseServiceImpl implements CourseService {
 		Course c=mapper.map(cdto, Course.class);
 		//cr.save(c);
 		return cr.save(c);
+	}
+	public Optional<Course> getCourseById(Long cid){
+		return cr.findById(cid);
+	}
+
+	@Override
+	public String updateCourse(Course c) {
+		
+		cr.save(c);
+		return "Updated";
+		
 	}
 
 }

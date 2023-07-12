@@ -5,6 +5,8 @@ package com.app.dto;
 import com.app.entities.Course;
 import com.app.entities.Gender;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,6 +26,6 @@ public class StudentRequestDto  {
 	private String mobileNo;
 	private String email;
 	private Gender gender;
-	@JsonBackReference
+//	@JsonIgnore
 	private Course course;
 }
