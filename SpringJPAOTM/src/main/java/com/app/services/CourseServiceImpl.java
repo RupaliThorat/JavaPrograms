@@ -1,11 +1,15 @@
 package com.app.services;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.app.dto.CourseRequestDto;
+import com.app.dto.CourseResponseDto;
 import com.app.entities.Course;
 import com.app.repositories.CourseRepo;
 @Service
@@ -15,16 +19,20 @@ public class CourseServiceImpl implements CourseService {
 
 	@Autowired
 	private CourseRepo cr;
+	@Autowired
+	private ModelMapper mapper;
 	@Override
-	public List<Course> getAllCourses() {
+	public List<CourseResponseDto> getAllCourses() {
 		
-		return cr.findAll();
+		return cr.findAll().stream().map(e -> mapper.map(e, CourseResponseDto.class)) // Entity --> DTO
+				.collect(Collectors.toList());
 	}
 
 	@Override
-	public String addCourse(Course c) {
-		cr.save(c);
-		return "Course Added";
+	public Course addCourse(CourseRequestDto cdto) {
+		Course c=mapper.map(cdto, Course.class);
+		//cr.save(c);
+		return cr.save(c);
 	}
 
 }

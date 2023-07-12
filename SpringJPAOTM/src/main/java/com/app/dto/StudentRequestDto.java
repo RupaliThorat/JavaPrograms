@@ -4,6 +4,7 @@ package com.app.dto;
 
 import com.app.entities.Course;
 import com.app.entities.Gender;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +14,8 @@ import lombok.ToString;
 
 @Getter
 @Setter
-
+@AllArgsConstructor
+@NoArgsConstructor
 @ToString
 public class StudentRequestDto  {
 	
@@ -22,6 +24,6 @@ public class StudentRequestDto  {
 	private String mobileNo;
 	private String email;
 	private Gender gender;
-	
+	@JsonBackReference
 	private Course course;
 }

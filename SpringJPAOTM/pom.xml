@@ -57,17 +57,12 @@
 			<version>3.1.0</version>
 		</dependency>
 		<!-- Swagger UI -->
-	<!-- 	<dependency>
+		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>1.6.4</version>
-		</dependency> -->
-		 <!-- API documentation. Refer the link http://springfox.github.io/springfox/docs/2.7.0/#introduction -->
- <dependency>
-     <groupId>io.springfox</groupId>
-     <artifactId>springfox-swagger2</artifactId>
-     <version>2.7.0</version>
- </dependency>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>

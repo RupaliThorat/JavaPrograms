@@ -32,7 +32,7 @@ public class StudentServiceImpl implements StudentService {
 //	}
 	@Override
 	public String addStudent(StudentRequestDto studdto) {
-		
+		System.out.println("In Service Student - "+studdto.getCourse());
 		Student s1 =mapper.map(studdto, Student.class);
 		
 		 sr.save(s1);

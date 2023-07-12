@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.app.dto.CourseRequestDto;
+import com.app.dto.CourseResponseDto;
 import com.app.entities.Course;
 import com.app.services.CourseService;
 
@@ -21,13 +23,13 @@ public class CourseController {
 	private CourseService cs;
 	
 	@GetMapping
-	public List<Course> getAllCourses(){
+	public List<CourseResponseDto> getAllCourses(){
 		return cs.getAllCourses();
 	}
 	@PostMapping
-	public String addCourse(@RequestBody Course c){
-		System.out.println(c);
-		String msg=cs.addCourse(c);
+	public Course addCourse(@RequestBody CourseRequestDto c){
+		System.out.println("In Course Controller"+c);
+		Course msg=cs.addCourse(c);
 		System.out.println(msg);
 		
 		return msg;
