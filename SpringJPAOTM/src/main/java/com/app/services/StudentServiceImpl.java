@@ -90,7 +90,9 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public String deleteStudent(Long sid) {
-		sr.deleteById(sid);
+		Student s=sr.findById(sid).get();
+		s.getCourse().removeStudent(s);
+		sr.delete(s);
 		return "Student Deleted" ;
 	}
 

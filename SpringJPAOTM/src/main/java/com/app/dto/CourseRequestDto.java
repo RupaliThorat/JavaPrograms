@@ -18,25 +18,25 @@ public class CourseRequestDto {
 	
 	private String ctitle;
 	private int intake;
-	public String getCtitle() {
-		return ctitle;
-	}
-	public void setCtitle(String ctitle) {
-		this.ctitle = ctitle;
-	}
-	public int getIntake() {
-		return intake;
-	}
-	public void setIntake(int intake) {
-		this.intake = intake;
-	}
-	public CourseRequestDto() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public CourseRequestDto(String ctitle, int intake) {
-		super();
-		this.ctitle = ctitle;
-		this.intake = intake;
-	}
+//	public String getCtitle() {
+//		return ctitle;
+//	}
+//	public void setCtitle(String ctitle) {
+//		this.ctitle = ctitle;
+//	}
+//	public int getIntake() {
+//		return intake;
+//	}
+//	public void setIntake(int intake) {
+//		this.intake = intake;
+//	}
+//	public CourseRequestDto() {
+//		super();
+//		// TODO Auto-generated constructor stub
+//	}
+//	public CourseRequestDto(String ctitle, int intake) {
+//		super();
+//		this.ctitle = ctitle;
+//		this.intake = intake;
+//	}
 }

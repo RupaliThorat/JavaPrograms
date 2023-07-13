@@ -31,13 +31,13 @@ public class CourseController {
 	public List<CourseResponseDto> getAllCourses(){
 		return cs.getAllCourses();
 	}
-	@PostMapping
+	@PostMapping("/add/")
 	public ResponseEntity<Course> addCourse(@RequestBody CourseRequestDto c){
 		System.out.println("In Course Controller"+c);
 		return new ResponseEntity<Course>(cs.addCourse(c), HttpStatus.CREATED);
 		
 	}
-	@PutMapping("/{cid}")
+	@PutMapping("update/{cid}")
 	public String updateCourse(@PathVariable Long cid, CourseRequestDto c){
 		System.out.println("In Course update"+c);
 		Course crs=cs.getCourseById(cid).get();

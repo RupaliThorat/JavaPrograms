@@ -39,11 +39,11 @@ public class StudentController {
 		System.out.println(cid);
 		return ss.getAllStudentCourseWise(cid);
 	}
-	@GetMapping
+	@GetMapping("/getallstud")
 	public List<StudentResponseDto> getAllStudents(){
 		return ss.getAllStudents();
 	}
-	@PostMapping
+	@PostMapping("/add")
 	public ResponseEntity<Student> addStudent(@RequestBody StudentRequestDto s){
 		System.out.println(s);
 	
@@ -57,22 +57,22 @@ public class StudentController {
 		
 		
 	}
-	@PutMapping("/{sid},{cid}")
-	public String assignCourse(@PathVariable Long sid, @PathVariable Long cid){
-		System.out.println("In assign");
+	@PutMapping(value="/assigncourse/{sid},{cid}")
+	public String assignCourse(@PathVariable("sid") Long sid, @PathVariable("cid") Long cid){
+		System.out.println("In assign"+sid.getClass());
 		return ss.assignCourse(sid, cid);
 	}
-	@PutMapping("/{sid}")
-	public String updateStudent(@PathVariable Long sid, StudentRequestDto s){
-		System.out.println("In Student update"+s);
-		Student stud=ss.getStudentById(sid).get();
+	@PutMapping(value="update/{sid}")
+	public String updateStudent(@PathVariable("sid") Long sid, @RequestBody StudentRequestDto stud){
+		System.out.println("In Student update"+stud);
+		Student s=ss.getStudentById(sid).get();
 		s.setFname(stud.getFname());
 		s.setLname(stud.getLname());
 		s.setEmail(stud.getEmail());
 		s.setMobileNo(stud.getMobileNo());
 		s.setCourse(stud.getCourse());
 		s.setGender(stud.getGender());
-		return ss.updateStudent(stud);
+		return ss.updateStudent(s);
 		
 	}
 	@PostMapping("/withcourse")
