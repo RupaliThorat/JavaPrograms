@@ -1,7 +1,0 @@
-#Compiled class files
-*.class
-
-#Package Files
-*.jar
-*.war
-*.rar
