@@ -23,4 +23,7 @@ public interface StudentService {
 	Optional<Student> getStudentById(Long sid);
 
 	String updateStudent(Student stud);
+
+	String deleteStudent(Long sid);
+
 }

@@ -12,4 +12,5 @@ public interface CourseService {
 	public Course addCourse( CourseRequestDto c);
 	public Optional<Course> getCourseById(Long cid);
 	public String updateCourse(Course crs);
+	String deleteCourse(Long cid);
 }

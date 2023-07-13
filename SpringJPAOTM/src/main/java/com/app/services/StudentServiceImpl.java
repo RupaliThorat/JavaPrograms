@@ -40,10 +40,10 @@ public class StudentServiceImpl implements StudentService {
 	public Student addStudent(StudentRequestDto studdto) {
 		System.out.println("In Service Student - ");
 		Student s1 = mapper.map(studdto, Student.class);
-
 		return sr.save(s1);
 	}
 
+	
 	@Override
 	public List<Student> getAllStudentCourseWise(Long cid) {
 
@@ -86,6 +86,12 @@ public class StudentServiceImpl implements StudentService {
 	public String updateStudent(Student stud) {
 		sr.save(stud);
 		return "Student Updated";
+	}
+
+	@Override
+	public String deleteStudent(Long sid) {
+		sr.deleteById(sid);
+		return "Student Deleted" ;
 	}
 
 }

@@ -47,4 +47,10 @@ public class CourseServiceImpl implements CourseService {
 		
 	}
 
+	@Override
+	public String deleteCourse(Long cid) {
+		cr.deleteById(cid);
+		return "Course Deleted" ;
+	}
+
 }

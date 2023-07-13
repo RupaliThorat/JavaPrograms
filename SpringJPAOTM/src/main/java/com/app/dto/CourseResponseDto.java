@@ -28,5 +28,25 @@ public class CourseResponseDto {
 	
 	private String ctitle;
 	private int intake;
-	
+	public String getCtitle() {
+		return ctitle;
+	}
+	public void setCtitle(String ctitle) {
+		this.ctitle = ctitle;
+	}
+	public int getIntake() {
+		return intake;
+	}
+	public void setIntake(int intake) {
+		this.intake = intake;
+	}
+	public CourseResponseDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public CourseResponseDto(String ctitle, int intake) {
+		super();
+		this.ctitle = ctitle;
+		this.intake = intake;
+	}
 }
