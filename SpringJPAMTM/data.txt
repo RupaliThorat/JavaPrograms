@@ -1,0 +1,41 @@
+update student
+{
+    "fname": "Sushma",
+    "lname": "Hatrakki",
+    "mobileNo": "8798765434",
+    "email": "sh@gmail.com",
+    "gender": "FEMALE",
+    "course": {
+      "id": 3
+}
+}
+
+assign course to student --> needed postmapping instead put mapping
+
+add course with student
+{
+  "fname": "Harshal",
+  "lname": "Wagchaure",
+  "mobileNo": "8798765678",
+  "email": "hw@gmail.com",
+  "gender": "MALE",
+"Course":{
+    "ctitle":"Power BI",
+    "intake":30
+}
+
+}
+
+add student - without course / with existing course id
+
+{
+  "fname": "Harshal",
+  "lname": "Wagchaure",
+  "mobileNo": "8798765678",
+  "email": "hw@gmail.com",
+  "gender": "MALE",
+"course":{
+  "id":1  
+}
+
+}
