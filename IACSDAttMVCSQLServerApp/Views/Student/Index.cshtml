@@ -1,0 +1,21 @@
+﻿<h1>Student List</h1>
+<table>
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Mobile No</th>
+
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem=> s.FirstName)</td>
+            <td>@Html.DisplayFor(modelItem=> s.LastName)</td>
+            <td>@Html.DisplayFor(modelItem=> s.Email)</td>
+            <td>@Html.DisplayFor(modelItem=> s.Password)</td>
+            <td>@Html.DisplayFor(modelItem=> s.MobileNo)</td>
+        </tr>
+    }
+</table> 

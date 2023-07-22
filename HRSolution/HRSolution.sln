@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRService", "HRService\HRService.csproj", "{FA622117-6B90-42EA-9400-BADAA46BA105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppConn", "TestAppConn\TestAppConn.csproj", "{952EC3C3-62CB-48AF-9911-4C186CCE0231}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA622117-6B90-42EA-9400-BADAA46BA105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA622117-6B90-42EA-9400-BADAA46BA105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA622117-6B90-42EA-9400-BADAA46BA105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA622117-6B90-42EA-9400-BADAA46BA105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{952EC3C3-62CB-48AF-9911-4C186CCE0231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{952EC3C3-62CB-48AF-9911-4C186CCE0231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{952EC3C3-62CB-48AF-9911-4C186CCE0231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{952EC3C3-62CB-48AF-9911-4C186CCE0231}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {022462C7-F776-4A21-B2D8-EA95090CBC3B}
+	EndGlobalSection
+EndGlobal
